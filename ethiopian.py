@@ -27,6 +27,13 @@ def define_mocks(mocks):
 
     return index
 
+def get_answer(index, multiple):
+    sum = 0
+    for i in index:
+        sum += multiple[i]
+
+    return sum
+
 if __name__=='__main__':
     (num_1, num_2) = get_input()
     mocks = []
@@ -39,6 +46,6 @@ if __name__=='__main__':
         multiple = multiple_2(num_2,len(mocks))
     
     index = define_mocks(mocks)
-    print(mocks)
-    print(multiple)
-    print(index)
+    sum = get_answer(index, multiple)
+
+    print(f"Result of {num_1} x {num_2} is {sum}.")
