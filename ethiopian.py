@@ -19,6 +19,14 @@ def multiple_2(number,len):
 
     return multiple
 
+def define_mocks(mocks):
+    index = []
+    for i in mocks:
+        if i%2==1:
+            index.append(mocks.index(i))
+
+    return index
+
 if __name__=='__main__':
     (num_1, num_2) = get_input()
     mocks = []
@@ -29,7 +37,8 @@ if __name__=='__main__':
     else:
         mocks = divide_by_2(num_1)
         multiple = multiple_2(num_2,len(mocks))
-
+    
+    index = define_mocks(mocks)
     print(mocks)
     print(multiple)
-    
+    print(index)
