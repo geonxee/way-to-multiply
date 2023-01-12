@@ -11,14 +11,25 @@ def divide_by_2(number):
 
     return mocks
 
+def multiple_2(number,len):
+    multiple = []
+    for _ in range(len):
+        multiple.append(number)
+        number *= 2
+
+    return multiple
+
 if __name__=='__main__':
     (num_1, num_2) = get_input()
     mocks = []
-
+    multiple = []
     if num_1 > num_2:
         mocks = divide_by_2(num_2)
+        multiple = multiple_2(num_1,len(mocks))
     else:
         mocks = divide_by_2(num_1)
+        multiple = multiple_2(num_2,len(mocks))
 
     print(mocks)
+    print(multiple)
     
